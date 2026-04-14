@@ -1,0 +1,13 @@
+node_modules
+# Python
+backend/venv/
+__pycache__/
+
+# Node
+frontend/node_modules/
+
+# Temp files
+backend/temp/
+
+# OS
+.DS_Store
