@@ -1,4 +1,4 @@
-# 🚀 Face Sorting AI
+# 🚀 FaceIT
 
 A web app that automatically groups images based on faces using AI.
 
