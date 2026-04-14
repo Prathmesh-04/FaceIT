@@ -1,0 +1,256 @@
+.page-shell {
+	min-height: 100vh;
+	display: grid;
+	place-items: center;
+	padding: 2rem 1rem 3rem;
+	position: relative;
+	overflow: hidden;
+}
+
+.ambient-layer {
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+	background:
+		radial-gradient(900px 420px at 8% 0%, #ffd68f 0%, rgba(255, 214, 143, 0) 72%),
+		radial-gradient(750px 380px at 95% 8%, #a6f3d4 0%, rgba(166, 243, 212, 0) 68%),
+		linear-gradient(140deg, #f7f2e8 0%, #eef6f1 54%, #f2efe8 100%);
+}
+
+.app-card {
+	width: min(1120px, 100%);
+	border: 1px solid rgba(38, 57, 44, 0.12);
+	background: rgba(255, 253, 249, 0.8);
+	backdrop-filter: blur(7px);
+	border-radius: 24px;
+	padding: 1.25rem;
+	box-shadow: 0 14px 40px rgba(23, 34, 20, 0.09);
+	animation: rise-in 500ms ease both;
+}
+
+.top-bar {
+	padding: 1rem 1rem 1.15rem;
+}
+
+.top-bar h1 {
+	font-size: clamp(1.8rem, 3vw, 2.6rem);
+	line-height: 1;
+	letter-spacing: -0.03em;
+	margin: 0;
+	color: #16211b;
+}
+
+.top-bar p {
+	margin: 0.45rem 0 0;
+	font-size: 1rem;
+	color: #3f5447;
+}
+
+.drop-zone {
+	border: 2px dashed #8ab39e;
+	border-radius: 18px;
+	background: linear-gradient(180deg, #f7faf2 0%, #f2f8f3 100%);
+	padding: 2rem 1rem;
+	text-align: center;
+}
+
+.drop-content {
+	display: grid;
+	gap: 0.45rem;
+}
+
+.drop-title {
+	margin: 0;
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: #1a2a22;
+}
+
+.drop-subtitle {
+	margin: 0;
+	color: #4f6558;
+}
+
+#imageInput {
+	display: none;
+}
+
+.file-picker {
+	justify-self: center;
+	margin-top: 0.45rem;
+	border-radius: 999px;
+	border: 1px solid #1f3328;
+	padding: 0.58rem 1rem;
+	cursor: pointer;
+	font-weight: 700;
+	background: #fefcf8;
+	color: #1f3328;
+	transition: transform 150ms ease, background 150ms ease;
+}
+
+.file-picker:hover {
+	transform: translateY(-1px);
+	background: #f4f0e8;
+}
+
+.action-row {
+	display: flex;
+	gap: 0.7rem;
+	flex-wrap: wrap;
+	margin: 1rem 0;
+}
+
+.btn {
+	border: 0;
+	border-radius: 999px;
+	padding: 0.62rem 1rem;
+	font-weight: 700;
+	font-size: 0.95rem;
+	cursor: pointer;
+	transition: transform 120ms ease, opacity 120ms ease;
+}
+
+.btn:hover {
+	transform: translateY(-1px);
+}
+
+.btn:disabled {
+	opacity: 0.55;
+	cursor: not-allowed;
+	transform: none;
+}
+
+.btn-primary {
+	background: #1e5d43;
+	color: #fff;
+}
+
+.btn-ghost {
+	background: #e6efe8;
+	color: #1f3328;
+}
+
+.status {
+	margin: 0.25rem 0 0.9rem;
+	font-weight: 600;
+}
+
+.status.error {
+	color: #a13232;
+}
+
+.panel {
+	border: 1px solid rgba(24, 43, 30, 0.12);
+	border-radius: 16px;
+	background: #fffdf7;
+	padding: 1rem;
+	margin-top: 0.85rem;
+}
+
+.panel-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.8rem;
+	margin-bottom: 0.7rem;
+}
+
+.panel-header h2 {
+	margin: 0;
+	font-size: 1.15rem;
+	color: #1e2e25;
+}
+
+.stats {
+	display: flex;
+	gap: 0.55rem;
+	flex-wrap: wrap;
+}
+
+.stats span {
+	border: 1px solid rgba(31, 51, 40, 0.16);
+	border-radius: 999px;
+	padding: 0.2rem 0.6rem;
+	background: #f2f8f3;
+	font-size: 0.85rem;
+	color: #274236;
+}
+
+.preview-grid,
+.result-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+	gap: 0.65rem;
+}
+
+.thumb-card,
+.result-card {
+	border-radius: 12px;
+	overflow: hidden;
+	border: 1px solid rgba(27, 44, 33, 0.14);
+	background: #fcfaf4;
+}
+
+.thumb-card img,
+.result-card img {
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	display: block;
+}
+
+.thumb-card p {
+	margin: 0;
+	padding: 0.4rem 0.52rem;
+	font-size: 0.74rem;
+	color: #3d5246;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.group-block + .group-block {
+	margin-top: 0.9rem;
+}
+
+.group-block h3 {
+	margin: 0 0 0.45rem;
+	display: flex;
+	align-items: baseline;
+	gap: 0.45rem;
+	font-size: 1rem;
+	color: #24382d;
+}
+
+.group-block h3 small {
+	color: #61766a;
+	font-weight: 600;
+	font-size: 0.78rem;
+}
+
+@keyframes rise-in {
+	from {
+		opacity: 0;
+		transform: translateY(8px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@media (max-width: 640px) {
+	.app-card {
+		border-radius: 18px;
+		padding: 0.9rem;
+	}
+
+	.drop-zone {
+		padding: 1.35rem 0.8rem;
+	}
+
+	.preview-grid,
+	.result-grid {
+		grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+	}
+}

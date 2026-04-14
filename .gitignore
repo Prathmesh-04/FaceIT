@@ -1,6 +1,9 @@
 node_modules
 # Python
-backend/venv/
+backend/.venv/
+backend/temp
+backend/hoco
+backend/__pycache__/
 __pycache__/
 
 # Node

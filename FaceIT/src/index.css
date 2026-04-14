@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap");
+
+:root {
+	color-scheme: light;
+	font-family: "IBM Plex Sans", "Segoe UI", "Noto Sans", sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+	width: 100%;
+	min-height: 100%;
+	margin: 0;
+}
+
+body {
+	min-height: 100vh;
+	font-family: "IBM Plex Sans", "Segoe UI", "Noto Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+.drop-title {
+	font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+}
